@@ -50,6 +50,26 @@ export class ExampleQueriesComponent implements OnInit {
     }`,
 
     `{
+      allUsers{
+        birthday{
+          day
+          month
+          year
+        }
+        email_address
+        date_joined
+        is_staff
+        first_name
+        last_name
+        is_male
+        is_active
+        is_staff
+        is_super_user
+        username
+      }
+    }`,
+
+    `{
       {
         country(local_language_name: "Polska"){
           local_language_name

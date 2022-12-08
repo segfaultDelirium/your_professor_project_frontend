@@ -20,6 +20,8 @@ import { ListCountriesComponent } from './modules/countries/list-countries/list-
 import { UpdateCountryComponent } from './modules/countries/update-country/update-country.component';
 import { CreateCountryComponent } from './modules/countries/create-country/create-country.component';
 import { UserComponent } from './modules/user/user.component';
+import { SignUpComponent } from './modules/user/sign-up/sign-up.component';
+import { LogInComponent } from './modules/user/log-in/log-in.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { UserComponent } from './modules/user/user.component';
     UpdateCountryComponent,
     CreateCountryComponent,
     UserComponent,
+    SignUpComponent,
+    LogInComponent,
   ],
   imports: [
     BrowserModule,

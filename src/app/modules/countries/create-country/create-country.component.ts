@@ -56,8 +56,8 @@ export class CreateCountryComponent implements OnInit {
           
           mutation: mutationString,
           variables: {
-            local_language_name: this.newCountry.local_language_name,
-            ISO_code_name: this.newCountry.ISO_code_name
+            local_language_name: newCountry.local_language_name,
+            ISO_code_name: newCountry.ISO_code_name
           }
           
         }).subscribe(
@@ -76,14 +76,6 @@ export class CreateCountryComponent implements OnInit {
             console.log(error)
           }
         )
-
-      // .valueChanges.subscribe((result: any) => {
-      //   console.log(result);
-      //   this.result = result?.data.createCountryByISO.country;
-      //   this.error = result.createCountryByISO.error;
-      //   this.status = result.createCountryByISO.status;
-      //   console.log(this.result)
-      // });
   }
 
 }

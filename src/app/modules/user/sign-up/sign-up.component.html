@@ -1,0 +1,96 @@
+<div>
+    sign up
+</div>
+<!-- 
+// createUser(birthday: Datetime, email_address: String, first_name: String, 
+// is_active: Boolean, is_male: Boolean, is_staff: Boolean, is_super_user: Boolean, 
+// last_name: String, password: String!, username: String!): MutationPayloadUser!
+-->
+
+<div class="column">
+    <mat-form-field>
+        <mat-label>username</mat-label>
+        <input matInput type="text" [(ngModel)]="newUser.username">
+        <button *ngIf="newUser.username" matSuffix mat-icon-button aria-label="Clear"
+            (click)="newUser.username=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Password" [type]="isPasswordVisible ? 'text' : 'password' " required>
+        <mat-icon matSuffix (click)="isPasswordVisible = !isPasswordVisible">{{isPasswordVisible ? 'visibility' : 'visibility_off'}}</mat-icon>
+        <mat-hint *ngIf="!newUser.password">Enter your password</mat-hint>
+        </mat-form-field>
+    <mat-form-field>
+        <mat-label>first_name</mat-label>
+        <input matInput type="text" [(ngModel)]="newUser.first_name">
+        <button *ngIf="newUser.first_name" matSuffix mat-icon-button aria-label="Clear"
+            (click)="newUser.first_name=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>last_name</mat-label>
+        <input matInput type="text" [(ngModel)]="newUser.last_name">
+        <button *ngIf="newUser.last_name" matSuffix mat-icon-button aria-label="Clear"
+            (click)="newUser.last_name=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>email_address</mat-label>
+        <input matInput type="text" [(ngModel)]="newUser.email_address">
+        <button *ngIf="newUser.email_address" matSuffix mat-icon-button aria-label="Clear"
+            (click)="newUser.email_address=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>birthday</mat-label>
+        <input matInput [matDatepicker]="picker" (dateChange)="dateChanged($event)">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-checkbox
+        class="example-margin"
+        [(ngModel)]="newUser.is_active">
+        is_active?
+    </mat-checkbox>
+    <mat-checkbox
+        class="example-margin"
+        [(ngModel)]="newUser.is_male">
+            is_male?
+    </mat-checkbox>
+    <mat-checkbox
+        class="example-margin"
+        [(ngModel)]="newUser.is_staff">
+        is_staff?
+    </mat-checkbox>
+    <mat-checkbox
+        class="example-margin"
+        [(ngModel)]="newUser.is_super_user">
+        is_super_user?
+    </mat-checkbox>
+
+    <button mat-button (click)="signUp(newUser)">signUp</button>
+
+    <div *ngIf="isSuccess != undefined" style="font-weight: bold;">
+        user creation {{isSuccess ? 'successful' : 'failed'}}
+    </div>
+
+    <div class="column">
+        <div class="column">
+            <div>email_address: {{result?.email_address}}</div>
+            <div>first_name {{result?.first_name}}</div>
+            <div>last_name: {{result?.last_name}}</div>
+            <div>is_active: {{result?.is_active}}</div>
+            <div>is_male: {{result?.is_male}}</div>
+            <div>is_staff: {{result?.is_staff}}</div>
+            <div>is_super_user: {{result?.is_super_user}}</div>
+            <div>username: {{result?.username}}</div>            
+        </div>
+
+    </div>
+    
+</div>

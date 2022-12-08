@@ -1,5 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
+
+export type User = {
+  birthday: string,
+  email_address: string,
+  first_name: string,
+  is_active: boolean, 
+  is_male: boolean, 
+  is_staff: boolean, 
+  is_super_user: boolean, 
+  last_name: string, 
+  password: string, 
+  username: string
+}
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -11,10 +25,15 @@ export class UserComponent implements OnInit {
 // is_active: Boolean, is_male: Boolean, is_staff: Boolean, is_super_user: Boolean, 
 // last_name: String, password: String!, username: String!): MutationPayloadUser!
 
-  constructor() { }
+
+
 
   ngOnInit(): void {
     
   }
+
+
+
+  
 
 }
