@@ -19,6 +19,7 @@ import { SearchCountryComponent } from './modules/countries/search-country/searc
 import { ListCountriesComponent } from './modules/countries/list-countries/list-countries.component';
 import { UpdateCountryComponent } from './modules/countries/update-country/update-country.component';
 import { CreateCountryComponent } from './modules/countries/create-country/create-country.component';
+import { UserComponent } from './modules/user/user.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CreateCountryComponent } from './modules/countries/create-country/creat
     ListCountriesComponent,
     UpdateCountryComponent,
     CreateCountryComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +53,7 @@ import { CreateCountryComponent } from './modules/countries/create-country/creat
           cache: new InMemoryCache(),
           link: httpLink.create({
             uri: 'http://localhost:7777/graphql/',
+            // uri: 'http://194.233.168.173:8000/graphql/',
           })
         }
       },

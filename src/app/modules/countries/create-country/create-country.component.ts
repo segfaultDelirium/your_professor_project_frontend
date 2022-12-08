@@ -60,9 +60,9 @@ export class CreateCountryComponent implements OnInit {
             ISO_code_name: this.newCountry.ISO_code_name
           }
           
-        })
-        .subscribe(
+        }).subscribe(
           ({ data }) => {
+            debugger;
             let result = data as any;
             console.log(data);
             this.result =  result?.createCountryByISO.country;
@@ -71,7 +71,9 @@ export class CreateCountryComponent implements OnInit {
             console.log(this.result)
           },
           error => {
-            console.log('there was an error sending the query', error)
+            debugger;
+            console.log('there was an error sending the query')
+            console.log(error)
           }
         )
 

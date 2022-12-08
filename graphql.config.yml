@@ -1,4 +1,5 @@
 schema: http://localhost:7777/graphql
+# schema: http://194.233.168.173:8000/graphql/
 documents: ./src/**/*.graphql
 generates:
   ./src/types.ts:

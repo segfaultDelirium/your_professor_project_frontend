@@ -4,6 +4,7 @@ import {LoginComponent} from "./auth/login/login.component";
 import {SignUpComponent} from "./auth/sign-up/sign-up.component";
 import { CountriesComponent } from './modules/countries/countries.component';
 import { ExampleQueriesComponent } from './modules/example-queries/example-queries.component';
+import { UserComponent } from './modules/user/user.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'example-queries', component: ExampleQueriesComponent},
   { path: 'QueryExecutor', loadChildren: () => import('./modules/query-executor/query-executor.module').then(m => m.QueryExecutorModule) },
   { path: 'countries', component: CountriesComponent},
+  { path: 'user', component: UserComponent},
 ];
 
 @NgModule({
