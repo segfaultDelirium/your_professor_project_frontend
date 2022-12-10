@@ -18,6 +18,8 @@ export class CreateCountryComponent implements OnInit {
     local_language_name: ''
   }
 
+  
+
   constructor(private apollo: Apollo) { }
 
   ngOnInit(): void {
@@ -65,9 +67,9 @@ export class CreateCountryComponent implements OnInit {
             debugger;
             let result = data as any;
             console.log(data);
-            this.result =  result?.createCountryByISO.country;
-            this.error =  result.error;
-            this.status =  result.status;
+            this.result =  (result as any).createCountryByISO.country;
+            this.error =  result.createCountryByISO.error;
+            this.status =  result.createCountryByISO.status;
             console.log(this.result)
           },
           error => {

@@ -75,11 +75,12 @@
 
     <button mat-button (click)="signUp(newUser)">signUp</button>
 
+    
     <div *ngIf="isSuccess != undefined" style="font-weight: bold;">
-        user creation {{isSuccess ? 'successful' : 'failed'}}
+        User creation {{isSuccess ? 'successful' : 'failed'}}
     </div>
 
-    <div class="column">
+    <div class="column" *ngIf="isSuccess">
         <div class="column">
             <div>email_address: {{result?.email_address}}</div>
             <div>first_name {{result?.first_name}}</div>
@@ -90,7 +91,6 @@
             <div>is_super_user: {{result?.is_super_user}}</div>
             <div>username: {{result?.username}}</div>            
         </div>
-
     </div>
     
 </div>

@@ -14,7 +14,7 @@ const routes: Routes = [
     path: 'signup', component: SignUpComponent
   },
   { path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule) },
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '', redirectTo: 'countries', pathMatch: 'full'},
   { path: 'example-queries', component: ExampleQueriesComponent},
   { path: 'QueryExecutor', loadChildren: () => import('./modules/query-executor/query-executor.module').then(m => m.QueryExecutorModule) },
   { path: 'countries', component: CountriesComponent},
