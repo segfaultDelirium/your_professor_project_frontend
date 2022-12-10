@@ -56,8 +56,8 @@ import { LogInComponent } from './modules/user/log-in/log-in.component';
         return {
           cache: new InMemoryCache(),
           link: httpLink.create({
-            uri: 'http://localhost:7777/graphql/',
-            // uri: 'http://194.233.168.173:8000/graphql/',
+            // uri: 'http://localhost:7777/graphql/',
+            uri: 'http://194.233.168.173:8000/graphql/',
           })
         }
       },
